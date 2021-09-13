@@ -21,6 +21,7 @@ public class Temp
 
     public void Converter()
     {
+        String finalOut = null;
         //converts fahrenheit to celsius and prints the result
         if(this.choice.matches("C") || this.choice.matches("c")) {
             Scanner input = new Scanner(System.in);
@@ -28,7 +29,7 @@ public class Temp
             int fah = input.nextInt();
 
             double cel = (fah - 32) * (5.0/9.0);
-            System.out.print("The temperature in Celsius is " + (int) cel);
+            finalOut = "The temperature in Celsius is " + (int) cel;
         }
 
         //converts celsius to Fahrenheit and prints the result
@@ -39,7 +40,9 @@ public class Temp
             int cel = input.nextInt();
 
             double fah = (cel * (5.0/9.0)) - 32 ;
-            System.out.print("The temperature in Fahrenheit is "+(int) fah);
+            finalOut = "The temperature in Fahrenheit is "+(int) fah;
         }
+
+        System.out.print(finalOut);
     }
 }
