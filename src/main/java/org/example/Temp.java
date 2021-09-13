@@ -43,6 +43,7 @@ public class Temp
             finalOut = "The temperature in Fahrenheit is "+(int) fah;
         }
 
+        //prints results
         System.out.print(finalOut);
     }
 }
